@@ -122,7 +122,7 @@
 
           <div class="col-lg-5">
             <figure class="portrait-wrap position-relative" data-aos="fade-left" data-aos-delay="200">
-              <img src="/assets/img/profile/suman1.jpg" alt="Profile Portrait" class="img-fluid portrait-img">
+              <img src="assets/img/profile/suman1.jpg" alt="Profile Portrait" class="img-fluid portrait-img">
               <figcaption class="visually-hidden">Minimal portrait preview</figcaption>
 
               <div class="badge note" data-aos="zoom-in" data-aos-delay="300">
@@ -175,7 +175,7 @@
 
           <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="250">
             <figure class="profile-figure text-center text-lg-end">
-              <img src="/assets/img/profile/suman2.jpg" alt="Portrait of Suman" class="img-fluid profile-photo">
+              <img src="assets/img/profile/suman2.jpg" alt="Portrait of Suman" class="img-fluid profile-photo">
               <figcaption class="profile-caption d-flex justify-content-end">
               </figcaption>
             </figure>
@@ -933,18 +933,18 @@
                 <button type="submit">Send</button>
             </form> -->
 
-              <form action="forms/contact.php" method="POST" class="php-email-form contact-form">
+              <form id="form" class="php-email-form contact-form">
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-field">
-                      <input type="text" name="name" class="form-input" id="userName" placeholder="Your Name" required="">
+                      <input type="text" name="name"  class="form-input" id="name" placeholder="Your Name" required="">
                       <label for="userName" class="field-label">Name</label>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="form-field">
-                      <input type="email" class="form-input" name="email" id="userEmail" placeholder="Your Email" required="">
+                      <input type="email" class="form-input" name="email" id="email" placeholder="Your Email" required="">
                       <label for="userEmail" class="field-label">Email</label>
                     </div>
                   </div>
@@ -953,21 +953,21 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-field">
-                      <input type="tel" class="form-input" name="phone" id="userPhone" placeholder="Your Phone">
+                      <input type="tel" class="form-input" name="phone" id="phone" placeholder="Your Phone">
                       <label for="userPhone" class="field-label">Phone</label>
                     </div>
                   </div>
 
                   <div class="col-md-6">
                     <div class="form-field">
-                      <input type="text" class="form-input" name="subject" id="messageSubject" placeholder="Subject" required="">
+                      <input type="text" class="form-input" name="subject" id="subject" placeholder="Subject" required="">
                       <label for="messageSubject" class="field-label">Subject</label>
                     </div>
                   </div>
                 </div>
 
                 <div class="form-field message-field">
-                  <textarea class="form-input message-input" name="message" id="userMessage" rows="5" placeholder="Tell us about your project" required=""></textarea>
+                  <textarea class="form-input message-input" name="message" id="message" rows="5" placeholder="Tell us about your project" required=""></textarea>
                   <label for="userMessage" class="field-label">Message</label>
                 </div>
 
@@ -977,7 +977,7 @@
                   <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
 
-                <button type="submit" class="send-button">
+                <button type="submit" id="button" class="send-button">
                   Send Message
                   <span class="button-arrow">→</span>
                 </button>
@@ -1106,6 +1106,16 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('G9F_OC4QF81gaNy7-')
+</script>
+
+
+  <script src="forms/contact.js
+  "></script>
 
 </body>
 
